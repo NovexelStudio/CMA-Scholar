@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>100% Free 1-on-1 CMA Mentorship & Study Material</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        purple: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .purple-gradient-text {
+            background: linear-gradient(135deg, #6D28D9 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .purple-gradient-bg {
+            background: linear-gradient(135deg, #6D28D9 0%, #7C3AED 50%, #8B5CF6 100%);
+        }
+        .radio-card input:checked + label {
+            border-color: #7C3AED;
+            background-color: #F5F3FF;
+            box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.15);
+        }
+        .radio-card input:checked + label .check-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* Mobile-first touch improvements */
+        input, select, textarea, button {
+            touch-action: manipulation;
+        }
+        /* Modal animation */
+        .modal-backdrop {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-content {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-900 antialiased selection:bg-purple-200 selection:text-purple-900 flex flex-col min-h-screen pb-20 md:pb-0">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl purple-gradient-bg flex items-center justify-center text-white font-bold shadow-md shadow-purple-200">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900">CMA<span class="purple-gradient-text">Mentor Pro</span></span>
+                        <span class="block text-[10px] sm:text-xs text-purple-600 font-semibold tracking-wide">100% FREE INITIATIVE</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                    <a href="#about" class="hover:text-purple-600 transition-colors">Why Free?</a>
+                    <a href="#benefits" class="hover:text-purple-600 transition-colors">What You Get</a>
+                    <a href="#testimonials" class="hover:text-purple-600 transition-colors">Success Stories</a>
+                    <a href="#faq" class="hover:text-purple-600 transition-colors">FAQs</a>
+                    <a href="#apply-form" class="purple-gradient-bg text-white px-5 py-2.5 rounded-full font-semibold shadow-md shadow-purple-200 hover:shadow-lg hover:shadow-purple-300 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2">
+                        <span>Get Free Mentorship</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </nav>
+
+                <!-- Mobile Quick CTA Button in Header -->
+                <button onclick="openQuickModal()" class="md:hidden purple-gradient-bg text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-md shadow-purple-200 flex items-center gap-1.5 active:scale-95 transition-all">
+                    <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+                    <span>Quick Apply</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-gradient-to-b from-purple-50/60 via-white to-slate-50">
+            <div class="absolute -top-24 -right-24 w-72 h-72 sm:w-96 sm:h-96 bg-purple-200/40 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 -left-24 w-60 h-60 sm:w-80 sm:h-80 bg-purple-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <!-- Top Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100 border border-purple-200 text-purple-800 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+                        <span class="flex h-2 w-2 rounded-full bg-purple-600 animate-ping"></span>
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-purple-600"></i>
+                        <span>Zero Hidden Charges • 100% Free Dedicated Guidance</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4 sm:mb-6">
+                        100% Free <span class="purple-gradient-text">1-on-1 CMA Mentorship</span> & Study Material
+                    </h1>
+
+                    <p class="text-base sm:text-xl text-slate-600 font-normal leading-relaxed mb-8">
+                        Elevate your ICMAI exam preparation with personalized study schedules, topic-wise notes, test strategies, and direct 1-on-1 WhatsApp guidance from experienced CMA rankers & qualified professionals.
+                    </p>
+
+                    <!-- Feature Badges Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 mb-8 max-w-2xl mx-auto">
+                        <div class="p-3 rounded-xl bg-white border border-purple-100 shadow-sm flex items-center justify-center gap-2 text-slate-700 font-medium text-xs sm:text-sm">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>
+                            <span>100% Free Access</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white border border-purple-100 shadow-sm flex items-center justify-center gap-2 text-slate-700 font-medium text-xs sm:text-sm">
+                            <i data-lucide="user-check" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>
+                            <span>1-on-1 Mentor</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white border border-purple-100 shadow-sm flex items-center justify-center gap-2 text-slate-700 font-medium text-xs sm:text-sm">
+                            <i data-lucide="book-open" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>
+                            <span>Free Notes & QA</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white border border-purple-100 shadow-sm flex items-center justify-center gap-2 text-slate-700 font-medium text-xs sm:text-sm">
+                            <i data-lucide="target" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>
+                            <span>Exam Blueprint</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                        <a href="#apply-form" class="w-full sm:w-auto purple-gradient-bg text-white px-8 py-4 rounded-xl text-base sm:text-lg font-bold shadow-lg shadow-purple-200 hover:shadow-xl hover:shadow-purple-300 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
+                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                            <span>Fill Full Application</span>
+                        </a>
+                        <button onclick="openQuickModal()" class="w-full sm:w-auto bg-white hover:bg-purple-50 text-purple-700 border-2 border-purple-300 hover:border-purple-600 px-7 py-3.5 rounded-xl text-base sm:text-lg font-bold transition-all text-center flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="zap" class="w-5 h-5 text-purple-600"></i>
+                            <span>Instant 30-Sec Registration</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="py-12 sm:py-20 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+                    <h2 class="text-xs uppercase tracking-widest font-bold text-purple-600 mb-2">Everything You Need To Pass</h2>
+                    <p class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">What You Get With Free Mentorship</p>
+                    <p class="mt-2 text-slate-600 text-sm sm:text-base">Structured support designed to transform your CMA preparation strategy.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Benefit Card 1 -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-b from-purple-50/50 to-white border border-purple-100 shadow-sm hover:shadow-md hover:border-purple-300 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                            <i data-lucide="calendar" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Personalized Study Plan</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Tailored daily and weekly timetables created according to your current level, working hours, and target attempt.
+                        </p>
+                    </div>
+
+                    <!-- Benefit Card 2 -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-b from-purple-50/50 to-white border border-purple-100 shadow-sm hover:shadow-md hover:border-purple-300 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                            <i data-lucide="message-square" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">1-on-1 Doubt Clearing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Direct interaction via WhatsApp/Calls with qualified CMAs to clarify complex theoretical concepts and practical problems.
+                        </p>
+                    </div>
+
+                    <!-- Benefit Card 3 -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-b from-purple-50/50 to-white border border-purple-100 shadow-sm hover:shadow-md hover:border-purple-300 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                            <i data-lucide="file-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Free Notes & Questions</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Access high-yield revision summaries, scanners, past year paper analyses, and essential formula sheets for free.
+                        </p>
+                    </div>
+
+                    <!-- Benefit Card 4 -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-b from-purple-50/50 to-white border border-purple-100 shadow-sm hover:shadow-md hover:border-purple-300 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Mock Exam Mentoring</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Learn writing presentation tactics, time management secrets for ICMAI exams, and evaluation feedback.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Application Form Section -->
+        <section id="apply-form" class="py-12 sm:py-20 bg-slate-50 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold uppercase mb-3">
+                        Detailed Guidance Form
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Apply For Your Free Mentorship</h2>
+                    <p class="mt-2 text-slate-600 text-sm sm:text-base">Fill in your details below so we can pair you with the best mentor for your CMA level.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-purple-100 p-5 sm:p-10 relative">
+                    
+                    <!-- Progress Bar & Steps Indicator -->
+                    <div id="form-progress-container" class="mb-8">
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-500 mb-3">
+                            <span id="step-indicator-text">Step 1 of 3: Personal Details</span>
+                            <span id="step-percentage-text" class="text-purple-600 font-bold">33% Completed</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                            <div id="progress-bar-fill" class="h-full purple-gradient-bg transition-all duration-300 ease-out" style="width: 33.33%;"></div>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+                            <div id="step-badge-1" class="py-2 px-1 rounded-lg bg-purple-100 text-purple-700 font-bold text-xs border border-purple-300 flex items-center justify-center gap-1 shadow-sm">
+                                <i data-lucide="user" class="w-3.5 h-3.5"></i>
+                                <span class="hidden sm:inline">1. Personal Details</span>
+                                <span class="sm:hidden">Step 1</span>
+                            </div>
+                            <div id="step-badge-2" class="py-2 px-1 rounded-lg bg-slate-100 text-slate-500 font-medium text-xs border border-slate-200 flex items-center justify-center gap-1">
+                                <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+                                <span class="hidden sm:inline">2. CMA Status</span>
+                                <span class="sm:hidden">Step 2</span>
+                            </div>
+                            <div id="step-badge-3" class="py-2 px-1 rounded-lg bg-slate-100 text-slate-500 font-medium text-xs border border-slate-200 flex items-center justify-center gap-1">
+                                <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+                                <span class="hidden sm:inline">3. Goals & Notes</span>
+                                <span class="sm:hidden">Step 3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Formspree Form -->
+                    <form id="cma-mentorship-form" action="https://formspree.io/f/mkjgvvpk" method="POST" class="space-y-6">
+                        
+                        <!-- STEP 1: Personal Information -->
+                        <div id="form-step-1" class="space-y-5 sm:space-y-6">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 border-b pb-3 flex items-center gap-2">
+                                <i data-lucide="user" class="w-5 h-5 text-purple-600"></i>
+                                Personal Details
+                            </h3>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                                <!-- Full Name -->
+                                <div>
+                                    <label for="fullName" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">Full Name <span class="text-red-500">*</span></label>
+                                    <input type="text" id="fullName" name="fullName" required placeholder="e.g. Rahul Sharma"
+                                        class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none transition-all text-slate-900">
+                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-fullName">Please enter your full name.</p>
+                                </div>
+
+                                <!-- WhatsApp Number -->
+                                <div>
+                                    <label for="whatsapp" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">WhatsApp Mobile Number <span class="text-red-500">*</span></label>
+                                    <div class="relative flex">
+                                        <span class="inline-flex items-center px-3 rounded-l-xl border border-r-0 border-slate-300 bg-slate-100 text-slate-600 text-sm font-medium">+91</span>
+                                        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="10 digit mobile number" maxlength="10" pattern="[0-9]{10}"
+                                            class="w-full px-4 py-3 text-sm rounded-r-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none transition-all text-slate-900">
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">Mentor connection & material sent on WhatsApp</p>
+                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-whatsapp">Please enter a valid 10-digit WhatsApp number.</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                                <!-- State / Territory -->
+                                <div>
+                                    <label for="state" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">State / Union Territory <span class="text-red-500">*</span></label>
+                                    <select id="state" name="state" required class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none transition-all text-slate-900 bg-white">
+                                        <option value="" disabled selected>Select your state</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Delhi NCR">Delhi NCR</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                        <option value="Other State/UT">Other State/UT</option>
+                                    </select>
+                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-state">Please select your state.</p>
+                                </div>
+
+                                <!-- Date of Birth + Auto Age Calculation -->
+                                <div>
+                                    <label for="dob" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">Date of Birth <span class="text-red-500">*</span></label>
+                                    <input type="date" id="dob" name="dob" required onchange="calculateAge(this.value, 'calculated-age')" class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none transition-all text-slate-900 bg-white">
+                                    <p class="text-xs text-purple-700 font-semibold mt-1 hidden" id="calculated-age"></p>
+                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-dob">Please select your date of birth.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end pt-3">
+                                <button type="button" onclick="nextStep(1)" class="w-full sm:w-auto purple-gradient-bg text-white px-8 py-3.5 rounded-xl font-bold shadow-md shadow-purple-200 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                                    <span>Continue to CMA Status</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2: CMA Journey & Attempt Details -->
+                        <div id="form-step-2" class="space-y-5 sm:space-y-6 hidden">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 border-b pb-3 flex items-center gap-2">
+                                <i data-lucide="book-open" class="w-5 h-5 text-purple-600"></i>
+                                CMA Course Journey
+                            </h3>
+
+                            <!-- Current CMA Level -->
+                            <div>
+                                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2.5">Current CMA Level <span class="text-red-500">*</span></label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="lvl-foundation" name="cmaLevel" value="Foundation" class="sr-only" required>
+                                        <label for="lvl-foundation" class="block p-3.5 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="font-bold text-slate-800 text-sm">CMA Foundation</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                            <p class="text-xs text-slate-500 mt-0.5">Entry level examination</p>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="lvl-inter-g1" name="cmaLevel" value="Intermediate Group 1" class="sr-only">
+                                        <label for="lvl-inter-g1" class="block p-3.5 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="font-bold text-slate-800 text-sm">Inter Group 1</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                            <p class="text-xs text-slate-500 mt-0.5">Intermediate Level - 1st Group</p>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="lvl-inter-g2" name="cmaLevel" value="Intermediate Group 2" class="sr-only">
+                                        <label for="lvl-inter-g2" class="block p-3.5 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="font-bold text-slate-800 text-sm">Inter Group 2</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                            <p class="text-xs text-slate-500 mt-0.5">Intermediate Level - 2nd Group</p>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="lvl-inter-both" name="cmaLevel" value="Intermediate Both Groups" class="sr-only">
+                                        <label for="lvl-inter-both" class="block p-3.5 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="font-bold text-slate-800 text-sm">Inter Both Groups</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                            <p class="text-xs text-slate-500 mt-0.5">Preparing for Both Groups</p>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="lvl-final-g3" name="cmaLevel" value="Final Group 3" class="sr-only">
+                                        <label for="lvl-final-g3" class="block p-3.5 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="font-bold text-slate-800 text-sm">Final Group 3</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                            <p class="text-xs text-slate-500 mt-0.5">Final Level - Group 3</p>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="lvl-final-g4" name="cmaLevel" value="Final Group 4" class="sr-only">
+                                        <label for="lvl-final-g4" class="block p-3.5 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="font-bold text-slate-800 text-sm">Final Group 4</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                            <p class="text-xs text-slate-500 mt-0.5">Final Level - Group 4</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-red-500 mt-2 hidden" id="err-cmaLevel">Please select your current CMA level.</p>
+                            </div>
+
+                            <!-- Recent Attempt Status -->
+                            <div>
+                                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2.5">Recent Attempt Status <span class="text-red-500">*</span></label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="att-upcoming" name="attemptStatus" value="First Attempt Upcoming" class="sr-only" required>
+                                        <label for="att-upcoming" class="block p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-xs sm:text-sm font-bold text-slate-800">First Attempt Upcoming</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="att-retake" name="attemptStatus" value="Need Guidance for Retake" class="sr-only">
+                                        <label for="att-retake" class="block p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-xs sm:text-sm font-bold text-slate-800">Retaking / Previous Unsuccessful</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="att-waiting" name="attemptStatus" value="Awaiting Exam Results" class="sr-only">
+                                        <label for="att-waiting" class="block p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-xs sm:text-sm font-bold text-slate-800">Appeared & Awaiting Results</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-card relative">
+                                        <input type="radio" id="att-cleared" name="attemptStatus" value="Cleared Previous Group" class="sr-only">
+                                        <label for="att-cleared" class="block p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-purple-300 transition-all">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-xs sm:text-sm font-bold text-slate-800">Cleared Previous / Moving Next</span>
+                                                <i data-lucide="check-circle-2" class="check-icon w-4 h-4 text-purple-600 opacity-0 transition-opacity"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-red-500 mt-2 hidden" id="err-attemptStatus">Please select your attempt status.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-3">
+                                <button type="button" onclick="prevStep(2)" class="px-5 py-3 rounded-xl border border-slate-300 text-slate-700 font-semibold hover:bg-slate-100 transition-all flex items-center gap-2 text-sm">
+                                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                                    <span>Back</span>
+                                </button>
+                                <button type="button" onclick="nextStep(2)" class="purple-gradient-bg text-white px-8 py-3.5 rounded-xl font-bold shadow-md shadow-purple-200 hover:shadow-lg transition-all flex items-center gap-2 text-sm">
+                                    <span>Continue to Qualification</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: Qualification, Occupation & Specific Doubts -->
+                        <div id="form-step-3" class="space-y-5 sm:space-y-6 hidden">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 border-b pb-3 flex items-center gap-2">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-purple-600"></i>
+                                Qualification & Mentorship Goals
+                            </h3>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                                <!-- Qualification -->
+                                <div>
+                                    <label for="qualification" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">Current Academic Qualification <span class="text-red-500">*</span></label>
+                                    <select id="qualification" name="qualification" required class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none transition-all text-slate-900 bg-white">
+                                        <option value="" disabled selected>Select qualification</option>
+                                        <option value="12th Pass / Pursuing Graduation">12th Pass / Pursuing Graduation</option>
+                                        <option value="Pursuing B.Com">Pursuing B.Com</option>
+                                        <option value="B.Com / BBA Graduate">B.Com / BBA Graduate</option>
+                                        <option value="M.Com / Post Graduate">M.Com / Post Graduate</option>
+                                        <option value="CA / CS Student">CA / CS Student</option>
+                                        <option value="Working Professional">Working Professional</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-qualification">Please select your qualification.</p>
+                                </div>
+
+                                <!-- Occupation -->
+                                <div>
+                                    <label for="occupation" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">Work Status / Current Occupation <span class="text-red-500">*</span></label>
+                                    <select id="occupation" name="occupation" required class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none transition-all text-slate-900 bg-white">
+                                        <option value="" disabled selected>Select occupation</option>
+                                        <option value="Full-Time Student">Full-Time Student</option>
+                                        <option value="Part-time Job + Studies">Part-time Job + Studies</option>
+                                        <option value="Full-time Working Professional">Full-time Working Professional</option>
+                                        <option value="Articleship / Practical Training">Articleship / Practical Training</option>
+                                        <option value="Self Employed / Other">Self Employed / Other</option>
+                                    </select>
+                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-occupation">Please select your work status.</p>
+                                </div>
+                            </div>
+
+                            <!-- Doubts or Goals Textarea -->
+                            <div>
+                                <label for="goals" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">Specific Challenges or Mentorship Needs (Optional)</label>
+                                <textarea id="goals" name="goals" rows="3" placeholder="Tell us your main challenges (e.g. Cost Management, Time Management, Revision Strategy...)"
+                                    class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none transition-all text-slate-900"></textarea>
+                            </div>
+
+                            <input type="hidden" name="_subject" value="New Full 100% Free CMA Mentorship Application">
+
+                            <div class="flex items-center justify-between pt-3">
+                                <button type="button" onclick="prevStep(3)" class="px-5 py-3 rounded-xl border border-slate-300 text-slate-700 font-semibold hover:bg-slate-100 transition-all flex items-center gap-2 text-sm">
+                                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                                    <span>Back</span>
+                                </button>
+                                <button type="submit" id="submit-btn" class="purple-gradient-bg text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-purple-200 hover:shadow-xl transition-all flex items-center gap-2 text-sm">
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    <span>Submit Application</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Instant Success Confirmation Box -->
+                    <div id="success-message" class="hidden text-center py-10 px-2 space-y-6">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
+                            <i data-lucide="check-circle" class="w-8 h-8 sm:w-10 sm:h-10"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Application Submitted! 🎉</h3>
+                            <p class="text-slate-600 text-sm sm:text-base max-w-md mx-auto">
+                                Thank you for applying for 100% Free CMA Mentorship. Your application has been sent directly to our mentor team.
+                            </p>
+                        </div>
+                        <div class="bg-purple-50 border border-purple-200 rounded-2xl p-5 text-left max-w-md mx-auto space-y-3">
+                            <div class="flex items-center gap-2 text-purple-900 font-bold text-sm">
+                                <i data-lucide="clock" class="w-4 h-4 text-purple-600"></i>
+                                <span>What happens next?</span>
+                            </div>
+                            <ul class="text-xs sm:text-sm text-slate-700 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5"></i>
+                                    <span>Mentor assigned based on your level & attempt.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5"></i>
+                                    <span>WhatsApp message sent within 24 hours.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5"></i>
+                                    <span>Instant access to free PDF study material.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-12 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-xs uppercase tracking-widest font-bold text-purple-600 mb-2">Student Success Stories</h2>
+                    <p class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Hear From Our Successful CMA Aspirants</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 gap-1 mb-3">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-slate-700 text-xs sm:text-sm italic mb-6">
+                                "I was struggling with CMA Inter Group 2 Cost Management. The 1-on-1 mentor helped me fix my timetable and provided summary notes. Cleared on my next attempt!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-purple-100 pt-4">
+                            <div class="w-9 h-9 rounded-full purple-gradient-bg text-white font-bold flex items-center justify-center text-xs">AP</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Ananya Patel</h4>
+                                <span class="text-[11px] text-purple-700 font-semibold">CMA Final Student</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 gap-1 mb-3">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-slate-700 text-xs sm:text-sm italic mb-6">
+                                "I couldn't believe this was 100% free! No hidden fees or sales pitches. Just pure guidance, paper strategy, and instant WhatsApp support."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-purple-100 pt-4">
+                            <div class="w-9 h-9 rounded-full purple-gradient-bg text-white font-bold flex items-center justify-center text-xs">VR</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Vikram Ramachandran</h4>
+                                <span class="text-[11px] text-purple-700 font-semibold">Cleared CMA Inter Both Groups</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 gap-1 mb-3">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-slate-700 text-xs sm:text-sm italic mb-6">
+                                "Working full-time and studying CMA Final was overwhelming. The mentor tailored a realistic 2-hour daily study plan that made all the difference."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-purple-100 pt-4">
+                            <div class="w-9 h-9 rounded-full purple-gradient-bg text-white font-bold flex items-center justify-center text-xs">SK</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Sneha Kulkarni</h4>
+                                <span class="text-[11px] text-purple-700 font-semibold">CMA Qualified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-12 sm:py-20 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-xs uppercase tracking-widest font-bold text-purple-600 mb-2">Clear Your Doubts</h2>
+                    <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</p>
+                </div>
+
+                <div class="space-y-3 sm:space-y-4">
+                    <div class="bg-white border border-purple-100 rounded-2xl overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(1)" class="w-full px-5 py-4 text-left font-bold text-slate-900 flex items-center justify-between hover:bg-purple-50/50 transition-colors">
+                            <span class="text-sm sm:text-base">Is this mentorship and study material really 100% free?</span>
+                            <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-purple-600 transition-transform"></i>
+                        </button>
+                        <div id="faq-answer-1" class="hidden px-5 pb-4 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 pt-3">
+                            Yes! This is a 100% free initiative run by qualified CMAs and rankers to give back to the CMA student community. There are no registration fees or hidden charges.
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-purple-100 rounded-2xl overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(2)" class="w-full px-5 py-4 text-left font-bold text-slate-900 flex items-center justify-between hover:bg-purple-50/50 transition-colors">
+                            <span class="text-sm sm:text-base">How will I receive the study materials and mentorship?</span>
+                            <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-purple-600 transition-transform"></i>
+                        </button>
+                        <div id="faq-answer-2" class="hidden px-5 pb-4 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 pt-3">
+                            Once you submit the form or quick registration, a dedicated mentor will connect with you via WhatsApp within 24 hours with targeted PDF notes and your study schedule.
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-purple-100 rounded-2xl overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(3)" class="w-full px-5 py-4 text-left font-bold text-slate-900 flex items-center justify-between hover:bg-purple-50/50 transition-colors">
+                            <span class="text-sm sm:text-base">Can I apply if I am working while preparing for CMA?</span>
+                            <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-purple-600 transition-transform"></i>
+                        </button>
+                        <div id="faq-answer-3" class="hidden px-5 pb-4 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 pt-3">
+                            Absolutely! Many of our mentees are working professionals. Our mentors build customized routines that suit working hours.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky Mobile CTA Bottom Bar (Always Visible on Mobile) -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-purple-200 px-4 py-2.5 sm:hidden shadow-2xl flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg purple-gradient-bg flex items-center justify-center text-white font-bold flex-shrink-0">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </div>
+            <div>
+                <p class="text-xs font-extrabold text-slate-900">100% Free Mentorship</p>
+                <p class="text-[10px] text-purple-700 font-medium">WhatsApp Support & Notes</p>
+            </div>
+        </div>
+        <button onclick="openQuickModal()" class="purple-gradient-bg text-white text-xs font-extrabold px-4 py-2.5 rounded-xl shadow-md shadow-purple-300 flex items-center gap-1.5 active:scale-95 transition-all">
+            <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+            <span>Register Free</span>
+        </button>
+    </div>
+
+    <!-- Responsive Quick Application Modal Popup -->
+    <div id="quick-modal" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center hidden">
+        <!-- Overlay backdrop -->
+        <div id="modal-overlay" onclick="closeQuickModal()" class="modal-backdrop fixed inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+        <!-- Modal Container -->
+        <div id="modal-container" class="modal-content relative bg-white w-full max-w-lg rounded-t-3xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 z-10 transform translate-y-full sm:translate-y-8 opacity-0 max-h-[90vh] overflow-y-auto">
+            
+            <!-- Close Button -->
+            <button onclick="closeQuickModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl purple-gradient-bg text-white flex items-center justify-center font-bold shadow-md shadow-purple-200">
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-extrabold text-slate-900">30-Second Quick Register</h3>
+                    <p class="text-xs text-purple-600 font-semibold">100% Free • Direct WhatsApp Guidance</p>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-600 mb-5">
+                Fill in these basic details and our mentor team will message you directly on WhatsApp with free study material.
+            </p>
+
+            <!-- Quick Formspree Form -->
+            <form id="quick-form" action="https://formspree.io/f/mkjgvvpk" method="POST" class="space-y-4">
+                
+                <div>
+                    <label for="q-fullName" class="block text-xs font-bold text-slate-700 mb-1">Full Name <span class="text-red-500">*</span></label>
+                    <input type="text" id="q-fullName" name="fullName" required placeholder="e.g. Ankit Sharma"
+                        class="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 outline-none">
+                    <p class="text-[11px] text-red-500 mt-1 hidden" id="q-err-fullName">Please enter your name.</p>
+                </div>
+
+                <div>
+                    <label for="q-whatsapp" class="block text-xs font-bold text-slate-700 mb-1">WhatsApp Mobile Number <span class="text-red-500">*</span></label>
+                    <div class="flex">
+                        <span class="inline-flex items-center px-3 rounded-l-xl border border-r-0 border-slate-300 bg-slate-100 text-slate-600 text-xs font-semibold">+91</span>
+                        <input type="tel" id="q-whatsapp" name="whatsapp" required placeholder="10 digit number" maxlength="10" pattern="[0-9]{10}"
+                            class="w-full px-3.5 py-2.5 text-sm rounded-r-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 outline-none">
+                    </div>
+                    <p class="text-[11px] text-red-500 mt-1 hidden" id="q-err-whatsapp">Valid 10-digit phone required.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label for="q-cmaLevel" class="block text-xs font-bold text-slate-700 mb-1">CMA Level <span class="text-red-500">*</span></label>
+                        <select id="q-cmaLevel" name="cmaLevel" required class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 outline-none bg-white">
+                            <option value="" disabled selected>Select Level</option>
+                            <option value="Foundation">Foundation</option>
+                            <option value="Inter Group 1">Inter G1</option>
+                            <option value="Inter Group 2">Inter G2</option>
+                            <option value="Inter Both Groups">Inter Both</option>
+                            <option value="Final Group 3">Final G3</option>
+                            <option value="Final Group 4">Final G4</option>
+                        </select>
+                        <p class="text-[11px] text-red-500 mt-1 hidden" id="q-err-cmaLevel">Select level.</p>
+                    </div>
+
+                    <div>
+                        <label for="q-dob" class="block text-xs font-bold text-slate-700 mb-1">DOB <span class="text-red-500">*</span></label>
+                        <input type="date" id="q-dob" name="dob" required onchange="calculateAge(this.value, 'q-calculated-age')" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-purple-600 outline-none bg-white">
+                        <p class="text-[10px] text-purple-700 font-semibold mt-0.5 hidden" id="q-calculated-age"></p>
+                    </div>
+                </div>
+
+                <input type="hidden" name="_subject" value="Quick 30-Sec CMA Mentorship Registration">
+
+                <button type="submit" id="q-submit-btn" class="w-full purple-gradient-bg text-white py-3.5 rounded-xl font-bold text-sm shadow-md shadow-purple-200 hover:shadow-lg flex items-center justify-center gap-2 mt-2">
+                    <i data-lucide="zap" class="w-4 h-4"></i>
+                    <span>Get Free Mentorship Now</span>
+                </button>
+            </form>
+
+            <!-- Modal Success Message -->
+            <div id="q-success-message" class="hidden text-center py-6 space-y-4">
+                <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                    <i data-lucide="check-circle" class="w-8 h-8"></i>
+                </div>
+                <h4 class="text-xl font-extrabold text-slate-900">Registration Complete! 🎉</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    We've received your request! A mentor will message you on WhatsApp within 24 hours with your free study materials.
+                </p>
+                <button onclick="closeQuickModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 py-2.5 rounded-xl text-xs font-bold transition-colors">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <div class="flex items-center justify-center gap-2 text-white font-bold text-lg">
+                <div class="w-8 h-8 rounded-lg purple-gradient-bg flex items-center justify-center text-white">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </div>
+                <span>CMA<span class="text-purple-400">Mentor Pro</span></span>
+            </div>
+            <p class="text-xs text-slate-400 max-w-lg mx-auto">
+                Empowering aspiring Cost & Management Accountants with 100% free guidance, mentorship, and high-quality revision materials.
+            </p>
+            <div class="pt-3 text-[11px] text-slate-500 border-t border-slate-800">
+                © <span id="current-year"></span> CMA Mentor Pro. All Rights Reserved. Not officially affiliated with ICMAI.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // DOB Auto Age Calculator Function
+        function calculateAge(dobString, targetElementId) {
+            if (!dobString) return;
+            const dob = new Date(dobString);
+            const today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            const monthDiff = today.getMonth() - dob.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+            const targetEl = document.getElementById(targetElementId);
+            if (targetEl && age > 0) {
+                targetEl.textContent = `Age: ${age} years`;
+                targetEl.classList.remove('hidden');
+            }
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(id) {
+            const ans = document.getElementById(`faq-answer-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                ans.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Modal Controls
+        function openQuickModal() {
+            const modal = document.getElementById('quick-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const container = document.getElementById('modal-container');
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(() => {
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                container.classList.remove('translate-y-full', 'sm:translate-y-8', 'opacity-0');
+                container.classList.add('translate-y-0', 'opacity-100');
+            }, 10);
+        }
+
+        function closeQuickModal() {
+            const modal = document.getElementById('quick-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const container = document.getElementById('modal-container');
+
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            container.classList.remove('translate-y-0', 'opacity-100');
+            container.classList.add('translate-y-full', 'sm:translate-y-8', 'opacity-0');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Multi-Step Form Navigation & Live Validation
+        let currentStep = 1;
+
+        function updateProgressBar(step) {
+            const fill = document.getElementById('progress-bar-fill');
+            const stepText = document.getElementById('step-indicator-text');
+            const percentText = document.getElementById('step-percentage-text');
+            
+            const badges = [
+                document.getElementById('step-badge-1'),
+                document.getElementById('step-badge-2'),
+                document.getElementById('step-badge-3')
+            ];
+
+            if (step === 1) {
+                fill.style.width = '33.33%';
+                stepText.textContent = 'Step 1 of 3: Personal Details';
+                percentText.textContent = '33% Completed';
+            } else if (step === 2) {
+                fill.style.width = '66.66%';
+                stepText.textContent = 'Step 2 of 3: CMA Journey';
+                percentText.textContent = '66% Completed';
+            } else if (step === 3) {
+                fill.style.width = '100%';
+                stepText.textContent = 'Step 3 of 3: Goals & Notes';
+                percentText.textContent = '100% Completed';
+            }
+
+            badges.forEach((badge, index) => {
+                if (index + 1 === step) {
+                    badge.className = "py-2 px-1 rounded-lg bg-purple-100 text-purple-700 font-bold text-xs border border-purple-300 flex items-center justify-center gap-1 shadow-sm";
+                } else if (index + 1 < step) {
+                    badge.className = "py-2 px-1 rounded-lg bg-emerald-50 text-emerald-700 font-semibold text-xs border border-emerald-200 flex items-center justify-center gap-1";
+                } else {
+                    badge.className = "py-2 px-1 rounded-lg bg-slate-100 text-slate-500 font-medium text-xs border border-slate-200 flex items-center justify-center gap-1";
+                }
+            });
+        }
+
+        function validateStep1() {
+            let isValid = true;
+            const fullName = document.getElementById('fullName');
+            const errName = document.getElementById('err-fullName');
+            if (!fullName.value.trim()) {
+                errName.classList.remove('hidden');
+                fullName.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                errName.classList.add('hidden');
+                fullName.classList.remove('border-red-500');
+            }
+
+            const whatsapp = document.getElementById('whatsapp');
+            const errPhone = document.getElementById('err-whatsapp');
+            if (!/^[0-9]{10}$/.test(whatsapp.value.trim())) {
+                errPhone.classList.remove('hidden');
+                whatsapp.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                errPhone.classList.add('hidden');
+                whatsapp.classList.remove('border-red-500');
+            }
+
+            const state = document.getElementById('state');
+            const errState = document.getElementById('err-state');
+            if (!state.value) {
+                errState.classList.remove('hidden');
+                state.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                errState.classList.add('hidden');
+                state.classList.remove('border-red-500');
+            }
+
+            const dob = document.getElementById('dob');
+            const errDob = document.getElementById('err-dob');
+            if (!dob.value) {
+                errDob.classList.remove('hidden');
+                dob.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                errDob.classList.add('hidden');
+                dob.classList.remove('border-red-500');
+            }
+
+            return isValid;
+        }
+
+        function validateStep2() {
+            let isValid = true;
+
+            const cmaLevels = document.getElementsByName('cmaLevel');
+            let levelSelected = Array.from(cmaLevels).some(r => r.checked);
+            const errLevel = document.getElementById('err-cmaLevel');
+            if (!levelSelected) {
+                errLevel.classList.remove('hidden');
+                isValid = false;
+            } else {
+                errLevel.classList.add('hidden');
+            }
+
+            const attemptStatus = document.getElementsByName('attemptStatus');
+            let attemptSelected = Array.from(attemptStatus).some(r => r.checked);
+            const errAttempt = document.getElementById('err-attemptStatus');
+            if (!attemptSelected) {
+                errAttempt.classList.remove('hidden');
+                isValid = false;
+            } else {
+                errAttempt.classList.add('hidden');
+            }
+
+            return isValid;
+        }
+
+        function validateStep3() {
+            let isValid = true;
+
+            const qual = document.getElementById('qualification');
+            const errQual = document.getElementById('err-qualification');
+            if (!qual.value) {
+                errQual.classList.remove('hidden');
+                qual.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                errQual.classList.add('hidden');
+                qual.classList.remove('border-red-500');
+            }
+
+            const occ = document.getElementById('occupation');
+            const errOcc = document.getElementById('err-occupation');
+            if (!occ.value) {
+                errOcc.classList.remove('hidden');
+                occ.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                errOcc.classList.add('hidden');
+                occ.classList.remove('border-red-500');
+            }
+
+            return isValid;
+        }
+
+        function nextStep(step) {
+            if (step === 1) {
+                if (!validateStep1()) return;
+                document.getElementById('form-step-1').classList.add('hidden');
+                document.getElementById('form-step-2').classList.remove('hidden');
+                currentStep = 2;
+            } else if (step === 2) {
+                if (!validateStep2()) return;
+                document.getElementById('form-step-2').classList.add('hidden');
+                document.getElementById('form-step-3').classList.remove('hidden');
+                currentStep = 3;
+            }
+            updateProgressBar(currentStep);
+        }
+
+        function prevStep(step) {
+            if (step === 2) {
+                document.getElementById('form-step-2').classList.add('hidden');
+                document.getElementById('form-step-1').classList.remove('hidden');
+                currentStep = 1;
+            } else if (step === 3) {
+                document.getElementById('form-step-3').classList.add('hidden');
+                document.getElementById('form-step-2').classList.remove('hidden');
+                currentStep = 2;
+            }
+            updateProgressBar(currentStep);
+        }
+
+        // Formspree AJAX Submission for Main Form
+        const form = document.getElementById('cma-mentorship-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            if (!validateStep3()) return;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Submitting...</span>
+            `;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    document.getElementById('cma-mentorship-form').classList.add('hidden');
+                    document.getElementById('form-progress-container').classList.add('hidden');
+                    document.getElementById('success-message').classList.remove('hidden');
+
+                    if (typeof confetti === 'function') {
+                        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                    }
+                } else {
+                    alert("Submission failed. Please check details and try again.");
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = `<span>Submit Application</span>`;
+                }
+            } catch (err) {
+                alert("Network error. Please try again.");
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<span>Submit Application</span>`;
+            }
+        });
+
+        // Formspree AJAX Submission for Quick Modal Form
+        const quickForm = document.getElementById('quick-form');
+        const qSubmitBtn = document.getElementById('q-submit-btn');
+
+        quickForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            let valid = true;
+            const qName = document.getElementById('q-fullName');
+            const qPhone = document.getElementById('q-whatsapp');
+            const qLevel = document.getElementById('q-cmaLevel');
+
+            if (!qName.value.trim()) {
+                document.getElementById('q-err-fullName').classList.remove('hidden');
+                valid = false;
+            } else {
+                document.getElementById('q-err-fullName').classList.add('hidden');
+            }
+
+            if (!/^[0-9]{10}$/.test(qPhone.value.trim())) {
+                document.getElementById('q-err-whatsapp').classList.remove('hidden');
+                valid = false;
+            } else {
+                document.getElementById('q-err-whatsapp').classList.add('hidden');
+            }
+
+            if (!qLevel.value) {
+                document.getElementById('q-err-cmaLevel').classList.remove('hidden');
+                valid = false;
+            } else {
+                document.getElementById('q-err-cmaLevel').classList.add('hidden');
+            }
+
+            if (!valid) return;
+
+            qSubmitBtn.disabled = true;
+            qSubmitBtn.innerHTML = `<span>Submitting...</span>`;
+
+            try {
+                const response = await fetch(quickForm.action, {
+                    method: 'POST',
+                    body: new FormData(quickForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    quickForm.classList.add('hidden');
+                    document.getElementById('q-success-message').classList.remove('hidden');
+                    if (typeof confetti === 'function') {
+                        confetti({ particleCount: 80, spread: 60, origin: { y: 0.5 } });
+                    }
+                } else {
+                    alert("Submission failed. Please try again.");
+                    qSubmitBtn.disabled = false;
+                    qSubmitBtn.innerHTML = `<span>Get Free Mentorship Now</span>`;
+                }
+            } catch (err) {
+                alert("Network error. Please try again.");
+                qSubmitBtn.disabled = false;
+                qSubmitBtn.innerHTML = `<span>Get Free Mentorship Now</span>`;
+            }
+        });
+    </script>
+</body>
+</html>
